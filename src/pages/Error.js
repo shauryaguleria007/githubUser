@@ -1,9 +1,20 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+
 const Error = () => {
-  return <h2>error page</h2>;
-};
+  return (
+    <Wrapper>
+      <div>
+        <h2>404</h2>
+        <h3>sorry the page you are trying to find is not avaliable.</h3>
+        <Link to={'/'} className={'btn'}>
+          Dashboard
+        </Link>
+      </div>
+    </Wrapper>
+  )
+}
 const Wrapper = styled.section`
   min-height: 100vh;
   display: grid;
@@ -17,5 +28,5 @@ const Wrapper = styled.section`
     color: var(--clr-grey-3);
     margin-bottom: 1.5rem;
   }
-`;
-export default Error;
+`
+export default Error
