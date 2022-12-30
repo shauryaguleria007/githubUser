@@ -1,6 +1,5 @@
-import React from 'react';
-import { Dashboard, Login, PrivateRoute, AuthWrapper, Error } from './pages';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react'
+import { Dashboard, Login, PrivateRoute, AuthWrapper, Error } from './pages'
 
 function App() {
   return (
@@ -9,7 +8,7 @@ function App() {
       <Login />
       <Error />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
