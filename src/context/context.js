@@ -42,6 +42,25 @@ const GithubProvider = ({ children }) => {
     })
     if (response) {
       setGithubUser(response.data)
+      const { login, followers_url } = response.data
+      await Promise.allSettled([
+        axios(`${rootUrl}/users/${login}/repos?per_person`),
+        axios(`${followers_url}?per_person`),
+      ])
+        .then((result) => {
+          const [repos, followers] = result
+          console.log(repos)
+          const status = 'fulfilled'
+          if (repos.status === status) {
+            setRepos(repos.value.data)
+          }
+          if (followers.status === status) {
+            setFollowers(followers.value.data)
+          }
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     } else {
       toggleError(true, 'user not found')
     }

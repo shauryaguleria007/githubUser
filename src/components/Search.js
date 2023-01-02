@@ -6,6 +6,7 @@ const Search = () => {
   const [user, setUser] = React.useState('')
   const { request, error, loading, searchGithubUser } =
     React.useContext(GithubContext)
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (user) {
