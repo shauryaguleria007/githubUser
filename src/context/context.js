@@ -36,6 +36,7 @@ const GithubProvider = ({ children }) => {
 
   const searchGithubUser = async (user) => {
     setLoading(true)
+    setError({ show: false, msg: '' })
     const response = await axios(`${rootUrl}/users/${user}`).catch((error) => {
       console.log(error)
     })
