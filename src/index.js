@@ -11,8 +11,9 @@ root.render(
   <React.StrictMode>
     <Auth0Provider
       domain='dev-mm8c1f7wuqdk4ydg.us.auth0.com'
-      clientId='aGvljcgs4QXOoBHTtX7i5zlQ866t6Loa client id'
+      clientId='aGvljcgs4QXOoBHTtX7i5zlQ866t6Loa'
       redirectUri={window.location.origin}
+      cacheLocation='localstorage'
     >
       <GithubProvider>
         <App />

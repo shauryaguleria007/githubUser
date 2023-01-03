@@ -1,4 +1,4 @@
-export default [
+const mockFollowers = [
   {
     login: 'ThaELL1',
     id: 37319124,
@@ -673,4 +673,5 @@ export default [
     type: 'User',
     site_admin: false,
   },
-];
+]
+export default mockFollowers

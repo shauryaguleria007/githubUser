@@ -47,8 +47,6 @@ const Card = () => {
       </div>
     </Wrapper>
   )
-
-  return <h2>card component</h2>
 }
 const Wrapper = styled.article`
   background: var(--clr-white);

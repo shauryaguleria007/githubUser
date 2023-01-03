@@ -12,7 +12,7 @@ import FusionCharts from 'fusioncharts'
 import Column2D from 'fusioncharts/fusioncharts.charts'
 
 // Include the theme as fusion
-import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.candy'
+import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion'
 
 // Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme)
@@ -38,7 +38,7 @@ const Column3D = ({ data }) => {
         yAxisName: 'Stars',
         numberSuffix: 'K',
         //Set the theme for your chart
-        theme: 'candy',
+        theme: 'fusion',
       },
       // Chart Data
       data,

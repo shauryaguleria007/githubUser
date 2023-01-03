@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { GithubContext } from '../context/context'
-import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts'
+import { Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts'
 const Repos = () => {
   const { repos } = React.useContext(GithubContext)
   let languages = repos.reduce((total, item) => {
@@ -18,7 +18,6 @@ const Repos = () => {
     }
     return total
   }, {})
-  const data = Object.values(languages)
   const mostUsed = Object.values(languages)
     .sort((a, b) => a.value > b.value)
     .slice(0, 5)
