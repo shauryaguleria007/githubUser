@@ -67,6 +67,7 @@ const GithubProvider = ({ children }) => {
     setLoading(false)
   }
   useEffect(checkRequest, [])
+  useEffect(checkRequest, [githubUser])
 
   return (
     <GithubContext.Provider
